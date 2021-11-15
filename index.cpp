@@ -40,37 +40,30 @@ int main()
     {
         if (esNarcisista(index))
         {
+            // Si el número es narcisista
             cout << "* El número " << index << " es narcisista" << endl;
         }
 
+        // Si no es narcisista
         index++;
     }
 }
 
 bool esNarcisista(int numero)
 {
-    int residuo, digitos[3], operador;
+    int primerDigito = 0, segundoDigito = 0, tercerDigito = 0, sumaDeCubos = 0;
 
-    operador = numero;
+    primerDigito = (numero / 100);      // Obtener el primer dígito
+    segundoDigito = (numero / 10) % 10; // Obtener el segundo dígito
+    tercerDigito = numero % 10;         // Obtener el tercer dígito
 
-    for (int i = 0; i < 3; i++)
-    {
-        residuo = operador % 10;
-        digitos[i] = residuo;
-        operador /= 10;
-    }
-
-    int primerDigito = digitos[2];
-    int segundoDigito = digitos[1];
-    int tercerDigito = digitos[0];
-
-    int sumaDeCubos = pow(primerDigito, 3) + pow(segundoDigito, 3) + pow(tercerDigito, 3); // Suma del cubo de los dígitos.
+    sumaDeCubos = pow(primerDigito, 3) + pow(segundoDigito, 3) + pow(tercerDigito, 3); // Suma del cubo de los dígitos.
 
     if (sumaDeCubos == numero)
     {
         // Si la suma de los cubos de los dígitos es igual al número que conforman esos dígitos.
         return true;
     }
-
+    // Si la suma de cubos no es igual a la variable número.
     return false;
 }
