@@ -41,7 +41,7 @@ int main()
         if (esNarcisista(index))
         {
             // Si el número es narcisista
-            cout << "* El número " << index << " es narcisista" << endl;
+            cout << "* El numero " << index << " es narcisista" << endl;
         }
 
         // Si no es narcisista
