@@ -33,7 +33,7 @@ int main()
 {
     int index = 100;
 
-    cout << "Los números narcisistas entre 100 y 999 son:\n" << endl;
+    cout << "Los numeros narcisistas entre 100 y 999 son:\n" << endl;
 
     while (index < 1000)
     {
